@@ -1,0 +1,32 @@
+{
+	"name": "astro-tutorial",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro check && astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix"
+	},
+	"dependencies": {
+		"@astrojs/check": "^0.8.2",
+		"astro": "^4.12.2",
+		"typescript": "^5.5.3"
+	},
+	"devDependencies": {
+		"@antfu/eslint-config": "^2.23.0",
+		"eslint": "9.5.0",
+		"eslint-plugin-astro": "^1.2.3",
+		"lint-staged": "^15.2.7",
+		"simple-git-hooks": "^2.11.1"
+	},
+	"simple-git-hooks": {
+		"pre-commit": "pnpm lint-staged"
+	},
+	"lint-staged": {
+		"*": "eslint --fix"
+	}
+}
