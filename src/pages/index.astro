@@ -1,7 +1,8 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "../layouts/Layout.astro"
+import Greeting from "../components/Greeting";
 ---
 
 <Layout title="Astro" />
-
+    <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
 <style></style>
